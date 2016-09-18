@@ -82,7 +82,7 @@ public class GuiUebung2Panel extends MyPanel
 
 	private void makeTheLayout()
 	{
-		this.addEmptyGrid(8, '.', 10, 10);
+		this.addEmptyGrid(8, '.',12, 8);
 
 		this.addCaptionCenter("UEBERSCHRIFT...", 10, 1, 10);
 		JPanel p = new JPanel();

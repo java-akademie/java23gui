@@ -9,11 +9,11 @@ import ch.java_akademie.tools.MyTools;
 
 /**
  * 
- * Die Klasse <code>MyDataSource</code>dient dazu, dass DB-Programme bez�glich des gew�nschten DBMS variabel bleiben
+ * Die Klasse <code>MyDataSource</code>dient dazu, dass DB-Programme bezueglich des gewuenschten DBMS variabel bleiben
  * koennen.
  * 
  * Die Klasse <code>MyDataSource</code>hat eine <code>getConnection()</code> -Methode, die die passende Connection zu
- * einem gew�nschten DBMS liefert.
+ * einem gewuenschten DBMS liefert.
  * 
  * Die Informationen DRIVER,URL,USER,PW kommen aus einer Property-Datei <code>db.props</code>, die im Class-Path stehen
  * muss.
