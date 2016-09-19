@@ -11,7 +11,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="gui_1"/>
+	<classpathentry kind="src" path="gui_1_Personenverwaltung"/>
 	<classpathentry excluding="**" kind="src" output="target/classes" path="gui_2_Adressverwaltung">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

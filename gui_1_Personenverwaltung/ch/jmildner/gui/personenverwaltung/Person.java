@@ -69,10 +69,11 @@ public class Person
 
 		StringBuffer sb = new StringBuffer();
 
-		sb.append("     ID     : " + id + "\n");
-		sb.append("     Name   : " + name + "\n");
-		sb.append("     Adresse: " + addr + "\n");
-		sb.append("\n");
+		sb.append(String.format("%,15d %20s %20s %n", id,name,addr));
+//		sb.append("     ID     : " + String.format("%,15d", id) + "\n");
+//		sb.append("     Name   : " + name + "\n");
+//		sb.append("     Adresse: " + addr + "\n");
+//		sb.append("\n");
 
 		return sb.toString();
 	}
@@ -81,6 +82,6 @@ public class Person
 	@Override
 	public String toString()
 	{
-		return id + "::" + name + "::" + addr;
+		return String.format("%d::%s::%s", id, name, addr);
 	}
 }

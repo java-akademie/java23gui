@@ -13,6 +13,7 @@ public class PersonenverwaltungPanel extends MyPanel
 {
 	PersonenArray pa = new PersonenArray("adressen.txt");
 
+
 	private static final long serialVersionUID = 1L;
 
 	JTextField tfId = new JTextField("", 10);
@@ -33,6 +34,7 @@ public class PersonenverwaltungPanel extends MyPanel
 
 	public PersonenverwaltungPanel()
 	{
+		pa.einlesen();
 		makeTheLayout();
 		addTheListener();
 	}
@@ -48,6 +50,7 @@ public class PersonenverwaltungPanel extends MyPanel
 				System.exit(1);
 			}
 		});
+
 		clear.addActionListener(new ActionListener()
 		{
 			@Override
@@ -59,21 +62,50 @@ public class PersonenverwaltungPanel extends MyPanel
 				taErgebnis.setText("");
 			}
 		});
+
+		btLoeschen.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				taErgebnis.append(pa.loeschen(tfId.getText()));
+				taErgebnis.append(pa.anzeigen());
+			}
+		});
+
 		btErfassen.addActionListener(new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				taErgebnis.append(pa.erfassen(tfId.getText(),
-						tfName.getText(), tfAddr.getText()));
+				taErgebnis.append(pa.erfassen(tfId.getText(), tfName.getText(), tfAddr.getText()));
 			}
 		});
+
 		btAnzeigen.addActionListener(new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
 				taErgebnis.append(pa.anzeigen());
+			}
+		});
+
+		btSortieren.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				taErgebnis.append(pa.sortieren());
+			}
+		});
+
+		btAbspeichern.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				taErgebnis.append(pa.abspeichern());
 			}
 		});
 
