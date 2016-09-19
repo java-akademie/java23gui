@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="rsa"/>
-	<classpathentry kind="src" path="rechner"/>
 	<classpathentry kind="src" path="gui_1"/>
 	<classpathentry kind="src" path="gui_2_Adressverwaltung"/>
 	<classpathentry kind="src" path="gui_3_Adressverwaltung"/>
