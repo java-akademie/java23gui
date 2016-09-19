@@ -56,7 +56,7 @@ public class AdressverwaltungPanel extends MyPanel
 	{
 		super(7, 10);
 		makeMenue();
-		this.addEmptyRow(15, ' ', 10, 7);
+		this.addEmptyRow(15, '.', 10, 7);
 		this.addCaptionCenter("Adressverwaltung", 15, 1, 7);
 
 		this.add(btOpenDB, 20, 1, 1);

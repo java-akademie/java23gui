@@ -31,6 +31,7 @@ public class CreateTableAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
+		System.out.println("CreateTableAction.actionPerformed()");
 		DbTool db = DbTool.getInstance();
 
 		String prot;
