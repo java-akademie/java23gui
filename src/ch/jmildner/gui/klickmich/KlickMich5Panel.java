@@ -66,15 +66,26 @@ public class KlickMich5Panel extends JPanel implements ActionListener
 
 	private void makeTheLayout()
 	{
-		MyPanel mp = new MyPanel(6, 8, true);
+		boolean test = false;
 
-		mp.addCaptionCenter("UEBERSCHRIFT", 1, 1, 6);
-
-		mp.add(b1, 20, 1, 2);
-		mp.add(b2, 20, 3, 2);
-		mp.add(tf1, 30, 1, 6);
-		mp.add(tf2, 40, 1, 6);
+		MyPanel mp = new MyPanel(6, 8, test);
 		
+		int line = test ? 1 : 0;
+
+		line++;
+		mp.addCaptionCenter("UEBERSCHRIFT", line, 1, 6);
+
+
+		line++;
+		mp.add(b1, line, 1, 2);
+		mp.add(b2, line, 3, 2);
+
+		line++;
+		mp.add(tf1, line, 1, 6);
+
+		line++;
+		mp.add(tf2, line, 1, 6);
+
 		this.add(mp);
 	}
 

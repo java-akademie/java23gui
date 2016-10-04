@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.GridLayout;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,20 +15,17 @@ public class KlickMich1 extends Frame
 {
 	private static final long serialVersionUID = 1L;
 
-
-	public static void main(String[] args)
-	{
-		new KlickMich1();
-	}
+	private int layout;
 
 	private Button b = new Button("klickMich");
 	private TextField tf1 = new TextField("", 30);
 	private TextField tf2 = new TextField("", 30);
 
 
-	public KlickMich1()
+	public KlickMich1(int layout)
 	{
-		super("KlickMich");
+		super("KlickMich " + layout);
+		this.layout = layout;
 		makeTheLayout();
 		addTheListener();
 		anzeigen();
@@ -56,14 +54,15 @@ public class KlickMich1 extends Frame
 
 
 		/*
-		 * der folgende Block ist noetig um das Programm durch anklicken des X in der rechten oberen Ecke beenden zu
-		 * koennen
+		 * der folgende Block ist noetig um das Programm durch anklicken
+		 * des X in der rechten oberen Ecke beenden zu koennen
 		 */
 		this.addWindowListener(new WindowAdapter()
 		{
 			@Override
 			public void windowClosing(WindowEvent we)
 			{
+				// Aufraeumarbeiten
 				System.exit(0);
 			}
 		});
@@ -72,7 +71,7 @@ public class KlickMich1 extends Frame
 
 	private void anzeigen()
 	{
-		setLocation(200, 100);
+		setLocation(300 * layout, 200 * layout);
 		pack();
 		setVisible(true);
 	}
@@ -80,12 +79,26 @@ public class KlickMich1 extends Frame
 
 	private void makeTheLayout()
 	{
-		// setLayout(new BorderLayout());
-		// setLayout(new GridLayout(3, 1));
-		setLayout(new FlowLayout());
-
-		add(BorderLayout.NORTH, b);
-		add(BorderLayout.EAST, tf1);
-		add(BorderLayout.WEST, tf2);
+		switch (layout)
+		{
+			case 1:
+				setLayout(new FlowLayout());
+				add(b);
+				add(tf1);
+				add(tf2);
+				break;
+			case 2:
+				setLayout(new GridLayout(3, 1));
+				add(b);
+				add(tf1);
+				add(tf2);
+				break;
+			case 3:
+				setLayout(new BorderLayout());
+				add(BorderLayout.NORTH, b);
+				add(BorderLayout.EAST, tf1);
+				add(BorderLayout.WEST, tf2);
+				break;
+		}
 	}
 }
