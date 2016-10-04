@@ -17,7 +17,7 @@ public class RechnerPanel extends JPanel implements ActionListener
 {
 	private static final long serialVersionUID = 1L;
 
-	private JButton add = new JButton("++++");
+	private JButton add = new JButton("+");
 	private JButton sub = new JButton("-");
 	private JButton mul = new JButton("*");
 	private JButton div = new JButton("/");

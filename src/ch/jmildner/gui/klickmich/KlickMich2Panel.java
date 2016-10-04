@@ -3,7 +3,6 @@ package ch.jmildner.gui.klickmich;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
@@ -49,8 +48,8 @@ public class KlickMich2Panel extends Panel
 
 	private void makeTheLayout()
 	{
-		setLayout(new BorderLayout());
-		setLayout(new GridLayout(3, 1));
+		// setLayout(new BorderLayout());
+		// setLayout(new GridLayout(3, 1));
 		setLayout(new FlowLayout());
 
 		add(BorderLayout.NORTH, b);
