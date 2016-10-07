@@ -1,15 +1,16 @@
-package ch.jmildner.gui.personenverwaltung;
+package ch.jkurs2.gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
 
-public class PersonenverwaltungPanel extends MyPanel
+public class PersonenverwaltungPanel extends JPanel
 {
 	PersonenArray pa = new PersonenArray("adressen.txt");
 
@@ -114,28 +115,48 @@ public class PersonenverwaltungPanel extends MyPanel
 
 	protected void makeTheLayout()
 	{
-		this.addEmptyRow(8, ' ', 10, 10);
-		addCaptionCenter("Personenverwaltung", 10, 1, 10);
+		boolean test = true;
 
-		addLabelRight("ID:", 30, 1, 2);
-		add(tfId, 30, 3, 2);
+		MyPanel mp = new MyPanel(10, 10, test);
 
-		addLabelRight("Name:", 40, 1, 2);
-		add(tfName, 40, 3, 8);
+		int zeile = test ? 1 : 0;
+		
+		// zeile 1
+		zeile++;
+		mp.addCaptionCenter("Personenverwaltung", zeile, 1, 10);
 
-		addLabelRight("Addr:", 50, 1, 2);
-		add(tfAddr, 50, 3, 8);
+		// zeile 2
+		zeile++;
+		mp.addLabelRight("ID:", zeile, 1, 2);
+		mp.add(tfId, zeile, 3, 2);
 
-		add(btErfassen, 70, 1, 2);
-		add(btAnzeigen, 70, 3, 2);
-		add(btSortieren, 70, 5, 2);
-		add(btLoeschen, 70, 7, 2);
-		add(btAbspeichern, 70, 9, 2);
+		// zeile 1
+		zeile++;
+	mp.addLabelRight("Name:", zeile, 1, 2);
+		mp.add(tfName, zeile, 3, 8);
 
-		addTextArea(taErgebnis, 80, 1, 10, 1);
+		// zeile 1
+		zeile++;
+		mp.addLabelRight("Addr:", zeile, 1, 2);
+		mp.add(tfAddr, zeile, 3, 8);
 
-		add(clear, 100, 7, 2);
-		add(quit, 100, 9, 2);
+		// zeile 1
+		zeile++;
+		mp.add(btErfassen, zeile, 1, 2);
+		mp.add(btAnzeigen, zeile, 3, 2);
+		mp.add(btSortieren, zeile, 5, 2);
+		mp.add(btLoeschen, zeile, 7, 2);
+		mp.add(btAbspeichern, zeile, 9, 2);
 
+		// zeile 1
+		zeile++;
+		mp.addTextArea(taErgebnis, zeile, 1, 10, 1);
+
+		// zeile 1
+		zeile++;
+		mp.add(clear, zeile, 7, 2);
+		mp.add(quit, zeile, 9, 2);
+
+		this.add(mp);
 	}
 }

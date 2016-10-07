@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="gui_1_Personenverwaltung"/>
 	<classpathentry kind="src" path="gui_2_Adressverwaltung"/>
 	<classpathentry kind="src" path="gui_3_Adressverwaltung"/>
 	<classpathentry kind="src" path="gui_4_Adressverwaltung"/>

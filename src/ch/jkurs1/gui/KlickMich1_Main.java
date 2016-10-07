@@ -1,4 +1,4 @@
-package ch.jkurs.gui;
+package ch.jkurs1.gui;
 
 public class KlickMich1_Main
 {

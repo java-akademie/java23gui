@@ -1,4 +1,4 @@
-package ch.jmildner.gui.personenverwaltung;
+package ch.jkurs2.gui;
 
 import ch.java_akademie.tools.MyTools;
 

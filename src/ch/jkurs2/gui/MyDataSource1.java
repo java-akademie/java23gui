@@ -1,4 +1,4 @@
-package ch.jmildner.gui.personenverwaltung;
+package ch.jkurs2.gui;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -79,7 +79,7 @@ import ch.java_akademie.tools.MyTools;
  * @author Johann Mildner
  * 
  */
-public class MyDataSource
+public class MyDataSource1
 {
 	/**
 	 * Properties
@@ -99,7 +99,7 @@ public class MyDataSource
 	 * 
 	 * @throws Exception
 	 */
-	public MyDataSource() throws Exception
+	public MyDataSource1() throws Exception
 	{
 		this((String) null);
 	}
@@ -110,7 +110,7 @@ public class MyDataSource
 	 * 
 	 * @throws Exception
 	 */
-	public MyDataSource(String database) throws Exception
+	public MyDataSource1(String database) throws Exception
 	{
 		propertiesFuellen(databasePropertiesName, database);
 		setConnection();

@@ -1,4 +1,4 @@
-package ch.jkurs.gui;
+package ch.jkurs1.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
