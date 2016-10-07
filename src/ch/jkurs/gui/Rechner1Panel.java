@@ -1,15 +1,17 @@
 package ch.jkurs.gui;
 
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import ch.java_akademie.tools.MyPanel;
-
-public class Rechner2Panel extends JPanel implements ActionListener
+public class Rechner1Panel extends JPanel implements ActionListener
 {
 	private static final long serialVersionUID = 1L;
 
@@ -25,7 +27,7 @@ public class Rechner2Panel extends JPanel implements ActionListener
 	private JTextField erg = new JTextField("", 15);
 
 
-	public Rechner2Panel()
+	public Rechner1Panel()
 	{
 		makeTheLayout();
 		addTheListener();
@@ -71,25 +73,26 @@ public class Rechner2Panel extends JPanel implements ActionListener
 
 		if (e.getSource() == add)
 		{
-			erg.setText("" + _Tools.runden(wert1 + wert2, 2));
+			erg.setText("" + _Tools.runden(wert1 + wert2, 4));
 		}
 
 		if (e.getSource() == sub)
 		{
-			erg.setText("" + _Tools.runden(wert1 - wert2, 2));
+			erg.setText("" + _Tools.runden(wert1 - wert2, 4));
 		}
 
 		if (e.getSource() == mul)
 		{
-			erg.setText("" + _Tools.runden(wert1 * wert2, 4));
+			erg.setText("" + _Tools.runden(wert1 * wert2, 8));
 		}
 
 		if (e.getSource() == div)
 		{
-			erg.setText("" + _Tools.runden(wert1 / wert2, 5));
+			erg.setText("" + _Tools.runden(wert1 / wert2, 8));
 		}
 
 	}
+
 
 
 	private void addTheListener()
@@ -106,45 +109,44 @@ public class Rechner2Panel extends JPanel implements ActionListener
 
 	private void makeTheLayout()
 	{
-		boolean testZeile = false;
+		this.setLayout(new BorderLayout());
 
-		MyPanel mp = new MyPanel(5, 14, testZeile);
+		this.add(new JLabel("                   R  E  C  H  N  E  R "), BorderLayout.NORTH);
 
-		int zeile = testZeile ? 1 : 0;
+		JPanel pc = new JPanel();
+		pc.setLayout(new GridLayout(4, 1));
 
-		// zeile 1
-		zeile++;
-		mp.addCaptionCenter("RECHNER", zeile, 1, 5);
+		JPanel pw1 = new JPanel();
+		pw1.add(new JLabel("Wert 1: "));
+		pw1.add(w1);
+		pc.add(pw1);
 
-		// zeile 2
-		zeile++;
-		mp.addLabel("Wert1:", zeile, 1, 1);
-		mp.add(w1, zeile, 2, 4, 1);
+		JPanel pw2 = new JPanel();
+		pw2.add(new JLabel("Wert 2: "));
+		pw2.add(w2);
+		pc.add(pw2);
 
-		// zeile 3
-		zeile++;
-		mp.addLabel("Wert2:", zeile, 1, 1);
-		mp.add(w2, zeile, 2, 4, 1);
+		JPanel pbuttons = new JPanel();
+		pbuttons.add(add);
+		pbuttons.add(sub);
+		pbuttons.add(mul);
+		pbuttons.add(div);
+		pc.add(pbuttons);
 
-		// zeile 4
-		zeile++;
-		mp.add(add, zeile, 2, 1, 1);
-		mp.add(sub, zeile, 3, 1, 1);
-		mp.add(mul, zeile, 4, 1, 1);
-		mp.add(div, zeile, 5, 1, 1);
+		JPanel perg = new JPanel();
+		perg.add(new JLabel("Ergebnis: "));
+		perg.add(erg);
+		pc.add(perg);
 
-		// zeile 5
-		zeile++;
-		mp.addLabel("Ergebnis:", zeile, 1, 1);
-		mp.add(erg, zeile, 2, 4, 1);
+		this.add(pc);
 
-		// zeile 6
-		zeile++;
-		mp.add(random, zeile, 3, 1, 1);
-		mp.add(clear, zeile, 4, 1, 1);
-		mp.add(ende, zeile, 5, 1, 1);
+		JPanel ps = new JPanel();
+		ps.setLayout(new FlowLayout());
+		ps.add(random);
+		ps.add(clear);
+		ps.add(ende);
 
-		this.add(mp);
+		this.add(ps, BorderLayout.SOUTH);
 	}
 
 }

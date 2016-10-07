@@ -5,24 +5,23 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
-public class Rechner2Frame extends JFrame
+public class Rechner1Frame extends JFrame
 {
 	private static final long serialVersionUID = 1L;
 
 
-	public Rechner2Frame()
+	public Rechner1Frame()
 	{
-		super("Rechner2");
+		super("Rechner1");
 
-		this.add(new Rechner2Panel());
+		this.add(new Rechner1Panel());
 
 		this.pack();
 
-
-		this.setLocation(400, 500);
+		this.setLocation(100, 200);
 
 		this.setVisible(true);
-		
+
 		this.addWindowListener(new WindowAdapter()
 		{
 			@Override
@@ -34,3 +33,4 @@ public class Rechner2Frame extends JFrame
 		});
 	}
 }
+

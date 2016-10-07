@@ -1,4 +1,4 @@
-package ch.jmildner.gui.klickmich;
+package ch.jkurs.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
@@ -15,16 +15,16 @@ public class KlickMich1 extends Frame
 {
 	private static final long serialVersionUID = 1L;
 
-	private int layout;
+	private _Layout layout;
 
 	private Button b = new Button("klickMich");
 	private TextField tf1 = new TextField("", 30);
 	private TextField tf2 = new TextField("", 30);
 
 
-	public KlickMich1(int layout)
+	public KlickMich1(_Layout layout)
 	{
-		super("KlickMich " + layout);
+		super("KlickMich1 " + layout);
 		this.layout = layout;
 		makeTheLayout();
 		addTheListener();
@@ -62,7 +62,7 @@ public class KlickMich1 extends Frame
 			@Override
 			public void windowClosing(WindowEvent we)
 			{
-				// Aufraeumarbeiten
+				// ev. Aufraeumarbeiten
 				System.exit(0);
 			}
 		});
@@ -71,29 +71,31 @@ public class KlickMich1 extends Frame
 
 	private void anzeigen()
 	{
-		setLocation(300 * layout, 200 * layout);
+		setLocation(300 * (1+layout.getOrdinal()), 200 * (1+layout.getOrdinal()));
 		pack();
 		setVisible(true);
+	
 	}
+	
 
 
 	private void makeTheLayout()
 	{
 		switch (layout)
 		{
-			case 1:
+			case flow:
 				setLayout(new FlowLayout());
 				add(b);
 				add(tf1);
 				add(tf2);
 				break;
-			case 2:
+			case grid:
 				setLayout(new GridLayout(3, 1));
 				add(b);
 				add(tf1);
 				add(tf2);
 				break;
-			case 3:
+			case border:
 				setLayout(new BorderLayout());
 				add(BorderLayout.NORTH, b);
 				add(BorderLayout.EAST, tf1);

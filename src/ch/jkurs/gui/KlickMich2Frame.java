@@ -1,4 +1,4 @@
-package ch.jmildner.gui.klickmich;
+package ch.jkurs.gui;
 
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
@@ -8,19 +8,24 @@ public class KlickMich2Frame extends Frame
 {
 	private static final long serialVersionUID = 1L;
 
+	private _Layout layout;
 
-	public static void main(String[] args)
+
+	public KlickMich2Frame(_Layout layout)
 	{
-		new KlickMich2Frame();
+		super("KlickMich2 " + layout);
+
+		this.layout = layout;
+
+		add(new KlickMich2Panel(layout));
+
+		anzeigen();
 	}
 
 
-	public KlickMich2Frame()
+	private void anzeigen()
 	{
-		super("KlickMich2");
-		add(new KlickMich2Panel());
-
-		setLocation(200, 100);
+		setLocation(400 * (1+layout.getOrdinal()), 300 * (1+layout.getOrdinal()));
 		pack();
 		setVisible(true);
 

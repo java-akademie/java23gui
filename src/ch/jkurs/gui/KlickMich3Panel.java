@@ -1,26 +1,27 @@
 package ch.jkurs.gui;
 
 import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.Panel;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class KlickMich2Panel extends Panel
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class KlickMich3Panel extends JPanel
 {
 	private static final long serialVersionUID = 1L;
 
 	private _Layout layout;
 
-	private Button b = new Button("klickMich");
-	private TextField tf1 = new TextField("", 30);
-	private TextField tf2 = new TextField("", 30);
+	private JButton b = new JButton("klickMich");
+	private JTextField tf1 = new JTextField("", 30);
+	private JTextField tf2 = new JTextField("", 30);
 
 
-	public KlickMich2Panel(_Layout layout)
+	public KlickMich3Panel(_Layout layout)
 	{
 		this.layout = layout;
 		makeTheLayout();

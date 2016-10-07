@@ -1,18 +1,12 @@
-package ch.jmildner.gui.klickmich;
+package ch.jkurs.gui;
 
-import java.awt.Frame;
-
-public class KlickMich1Main extends Frame
+public class KlickMich1_Main
 {
-	private static final long serialVersionUID = 1L;
-
-	
-
 	public static void main(String[] args)
 	{
-		new KlickMich1(1);
-//		new KlickMich1(2);
-//		new KlickMich1(3);
+		new KlickMich1(_Layout.flow);
+		new KlickMich1(_Layout.grid);
+		new KlickMich1(_Layout.border);
 	}
 
 }
