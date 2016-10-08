@@ -11,7 +11,7 @@ public class ClearAction extends AbstractAction
 {
 	private static final long serialVersionUID = 1L;
 
-	AdressverwaltungPanel panel;
+	private AdressverwaltungPanel panel;
 
 
 	public ClearAction(final AdressverwaltungPanel panel)
@@ -24,7 +24,6 @@ public class ClearAction extends AbstractAction
 
 		this.panel = panel;
 	}
-
 
 
 	@Override

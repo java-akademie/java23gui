@@ -46,7 +46,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 	{
 		menuItemClear.setText("_clear");
-		// menuItemClear.setIcon(null);
+		 menuItemClear.setIcon(null);
 		popupMenu.add(menuItemClear);
 		popupMenu.add(menuItemExit);
 	}
@@ -55,9 +55,11 @@ public class AdressverwaltungPanel extends MyPanel
 	public AdressverwaltungPanel()
 	{
 		super(7, 10);
+		
 		makeMenue();
+		
 		this.addEmptyRow(15, '.', 10, 7);
-		this.addCaptionCenter("Adressverwaltung", 15, 1, 7);
+		this.addCaptionCenter("Adressverwaltung xxx", 15, 1, 7);
 
 		this.add(btOpenDB, 20, 1, 1);
 		this.add(btCloseDB, 20, 2, 1);
@@ -84,7 +86,6 @@ public class AdressverwaltungPanel extends MyPanel
 
 		this.add(btClear, 90, 6, 1);
 		this.add(btQuit, 90, 7, 1);
-
 	}
 
 
@@ -259,7 +260,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 		menuBar.add(menuHilfe);
 
-		add(menuBar, 1, 1, 7, 1);
+		add(menuBar, 1, 1, 7, 4);
 	}
 
 

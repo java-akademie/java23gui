@@ -1,5 +1,6 @@
 package ch.jmildner.adressverwaltung.ui;
 
+import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
@@ -32,7 +33,7 @@ public final class AdressverwaltungFrame extends JFrame
 
 	public AdressverwaltungFrame()
 	{
-		super("Adressverwaltung ");
+		super("Adressverwaltung xxx");
 
 		makeAndShowTheLayout();
 		setTheActions();
@@ -114,7 +115,7 @@ public final class AdressverwaltungFrame extends JFrame
 
 		add(panel);
 		setLocation(100, 200);
-		// setMinimumSize(new Dimension(500, 450));
+		 setMinimumSize(new Dimension(500, 450));
 		pack();
 		setVisible(true);
 	}
