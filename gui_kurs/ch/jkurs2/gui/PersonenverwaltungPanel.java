@@ -12,7 +12,7 @@ import ch.java_akademie.tools.MyPanel;
 
 public class PersonenverwaltungPanel extends JPanel
 {
-	PersonenArray pa = new PersonenArray("adressen.txt");
+	PersonenArray pa = new PersonenArray("temp/adressen.txt");
 
 
 	private static final long serialVersionUID = 1L;
