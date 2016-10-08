@@ -10,43 +10,42 @@ import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
 
-
 public class AdressverwaltungPanel extends MyPanel
 {
 	private static final long serialVersionUID = 1L;
 
-	private JButton btOpenDB = new JButton("_open");
+	private JButton btClear = new JButton("_clear");
 	private JButton btCloseDB = new JButton("_close");
 	private JButton btCreateTable = new JButton("_create");
+	private JButton btDelete = new JButton("_delete");
 	private JButton btDropTable = new JButton("_drop");
 	private JButton btInsert = new JButton("_insert");
+	private JButton btOpenDB = new JButton("_open");
+	private JButton btQuit = new JButton("_quit");
 	private JButton btSelect = new JButton("_select");
 	private JButton btUpdate = new JButton("_update");
-	private JButton btDelete = new JButton("_delete");
-	private JButton btClear = new JButton("_clear");
-	private JButton btQuit = new JButton("_quit");
 
-	private JMenuItem menuItemOpenDB = new JMenuItem("_open");
+	private JMenuItem menuItemClear = new JMenuItem("_clear");
 	private JMenuItem menuItemCloseDB = new JMenuItem("_close");
 	private JMenuItem menuItemCreateTable = new JMenuItem("_create");
 	private JMenuItem menuItemDropTable = new JMenuItem("_drop");
 	private JMenuItem menuItemExit = new JMenuItem("_exit");
 
 
-	private JTextField tfId = new JTextField("", 10);
-	private JTextField tfName = new JTextField("", 20);
-	private JTextField tfAddr = new JTextField("", 20);
-	private JTextArea taProtokoll = new JTextArea("", 15, 40);
-
-
+	private JMenuItem menuItemOpenDB = new JMenuItem("_open");
 	private JPopupMenu popupMenu = new JPopupMenu();
+	private JTextArea taProtokoll = new JTextArea("", 15, 40);
+	private JTextField tfAddr = new JTextField("", 20);
 
-	private JMenuItem menuItemClear = new JMenuItem("_clear");
+
+	private JTextField tfId = new JTextField("", 10);
+
+	private JTextField tfName = new JTextField("", 20);
 
 
 	{
 		menuItemClear.setText("_clear");
-		 menuItemClear.setIcon(null);
+		menuItemClear.setIcon(null);
 		popupMenu.add(menuItemClear);
 		popupMenu.add(menuItemExit);
 	}
@@ -55,9 +54,9 @@ public class AdressverwaltungPanel extends MyPanel
 	public AdressverwaltungPanel()
 	{
 		super(7, 10);
-		
+
 		makeMenue();
-		
+
 		this.addEmptyRow(15, '.', 10, 7);
 		this.addCaptionCenter("Adressverwaltung xxx", 15, 1, 7);
 
@@ -209,6 +208,7 @@ public class AdressverwaltungPanel extends MyPanel
 	}
 
 
+
 	void makeMenue()
 	{
 
@@ -260,7 +260,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 		menuBar.add(menuHilfe);
 
-		add(menuBar, 1, 1, 7, 4);
+		add(menuBar, 1, 1, 7, 1);
 	}
 
 
@@ -292,5 +292,4 @@ public class AdressverwaltungPanel extends MyPanel
 	{
 		this.menuItemOpenDB = menuItemOpenDB;
 	}
-
 }
