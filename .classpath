@@ -2,10 +2,10 @@
 <classpath>
 	<classpathentry excluding="main/java/|test/java/" kind="src" path="src"/>
 	<classpathentry kind="src" path="gui_kurs"/>
+	<classpathentry kind="src" path="gui1_rsa"/>
 	<classpathentry kind="src" path="gui_2_Adressverwaltung"/>
 	<classpathentry kind="src" path="gui_4_Adressverwaltung_mit_RMI"/>
 	<classpathentry kind="src" path="resources"/>
-	<classpathentry kind="src" path="gui1_rsa"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

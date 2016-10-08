@@ -1,6 +1,4 @@
-package ch.jmildner.xgui.rsa;
-
-import ch.jmildner.xgui.rsa.ui.RsaFrame;
+package ch.jmildner.rsa;
 
 public class RsaApp
 {
