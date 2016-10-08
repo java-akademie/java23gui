@@ -1,6 +1,4 @@
-package ch.jmildner.xgui.rechner;
-
-import ch.jmildner.xgui.rechner.ui.RechnerFrame;
+package ch.jmildner.xgui.rechner.ui;
 
 public class Main
 {

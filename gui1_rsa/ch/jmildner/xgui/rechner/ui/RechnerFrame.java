@@ -136,10 +136,11 @@ public class RechnerFrame extends JFrame
 			@Override
 			public void mouseClicked(MouseEvent e)
 			{
-				if (e.getButton() == MouseEvent.BUTTON3)
+				if (e.getButton() == MouseEvent.BUTTON2)
 				{
 					System.out.println("rechte Maustaste gedrueckt!!");
 				}
+				System.out.println("xx" + e.getButton());
 			}
 		});
 	}

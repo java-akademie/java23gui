@@ -16,6 +16,7 @@ class PersonenverwaltungFrame extends JFrame
 	PersonenverwaltungFrame()
 	{
 		super("Personenverwaltung");
+		
 		this.add(new PersonenverwaltungPanel());
 		this.setLocation(200, 100);
 		this.pack();

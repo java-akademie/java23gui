@@ -8,7 +8,7 @@ public class TestPersonDao
 {
 	public static void main(String[] args) throws Exception
 	{
-		MyTools.uebOut("ch.jmildner.jdbc.aufgabe3.TestPersonDao.main()");
+		MyTools.uebOut("ch.jkurs3.gui.TestPersonDao.main()");
 		
 		PersonDao dao = new PersonDaoImpl("POSTGRES");
 
