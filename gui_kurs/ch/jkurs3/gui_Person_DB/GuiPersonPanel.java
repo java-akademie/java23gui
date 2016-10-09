@@ -1,4 +1,4 @@
-package ch.jkurs3.gui;
+package ch.jkurs3.gui_Person_DB;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +16,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
+import ch.java_akademie.tools.MyTools;
+import ch.java_akademie.tools.TestDaten;
 
 public class GuiPersonPanel extends JPanel implements ActionListener
 {
@@ -159,27 +161,6 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 	}
 
 
-	private void clear()
-	{
-
-		id.setText("");
-		name.setText("");
-		addr.setText("");
-
-		ta.setText("");
-
-		try
-		{
-			mp.remove(sp);
-			jFrame.pack();
-		}
-		catch (Exception e)
-		{
-		}
-
-	}
-
-
 	private void close()
 	{
 		dao = null;
@@ -192,43 +173,10 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 		try
 		{
 			dao = new PersonDaoImpl();
+			
 			ta.setText("connect OK");
 		}
 		catch (Exception e)
-		{
-			ta.setText(e.getMessage());
-		}
-	}
-
-
-	private void create()
-	{
-		try
-		{
-			dao.create();
-			ta.setText("create OK");
-		}
-		catch (SQLException e)
-		{
-			ta.setText(e.getMessage());
-		}
-	}
-
-
-	private void delete()
-	{
-		ta.setText("\ndelete under construktion");
-	}
-
-
-	private void drop()
-	{
-		try
-		{
-			dao.drop();
-			ta.setText("drop OK");
-		}
-		catch (SQLException e)
 		{
 			ta.setText(e.getMessage());
 		}
@@ -246,11 +194,13 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 			{
 				name.setText("");
 				addr.setText("");
+
+				clear();
+
 				for (int i = 1; i < 10; i++)
 				{
-					int iid = (int) (Math.random() * 2000000000);
-					Person p = new Person(iid, "name_" + iid,
-							"addr_" + iid);
+					Person p = new Person(MyTools.getRandom(1, 2000000000), TestDaten.getName(),
+							TestDaten.getAdresse());
 					dao.insert(p);
 					ta.append(p + " eingefuegt!\n");
 				}
@@ -265,6 +215,7 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 					saddr = addr.getText();
 					Person p = new Person(iid, sname, saddr);
 					dao.insert(p);
+					clear();
 					ta.append(p + " eingefuegt!\n");
 				}
 				catch (NumberFormatException x)
@@ -272,6 +223,8 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 					ta.append("id nicht numerisch:" + sid + "\n");
 				}
 			}
+
+
 		}
 		catch (SQLException e)
 		{
@@ -439,6 +392,63 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 		{
 			ta.append("\n" + e.getMessage());
 		}
+	}
+
+
+	private void drop()
+	{
+		try
+		{
+			dao.drop();
+			ta.setText("drop OK");
+		}
+		catch (SQLException e)
+		{
+			ta.setText(e.getMessage());
+		}
+	}
+
+
+	private void create()
+	{
+		try
+		{
+			dao.create();
+			ta.setText("create OK");
+		}
+		catch (SQLException e)
+		{
+			ta.setText(e.getMessage());
+		}
+	}
+
+
+	private void clear()
+	{
+
+		id.setText("");
+		name.setText("");
+		addr.setText("");
+
+		ta.setText("");
+
+		try
+		{
+			if (sp != null)
+				mp.remove(sp);
+		}
+		catch (Exception e)
+		{
+			System.out.println("fehler in clear: " + e.getMessage());
+		}
+
+		jFrame.pack();
+	}
+
+
+	private void delete()
+	{
+		ta.setText("\ndelete under construktion");
 	}
 
 

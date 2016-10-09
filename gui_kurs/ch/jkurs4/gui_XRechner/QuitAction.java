@@ -1,4 +1,4 @@
-package ch.jmildner.rsa;
+package ch.jkurs4.gui_XRechner;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -9,20 +9,19 @@ public class QuitAction extends AbstractAction
 {
 	private static final long serialVersionUID = 1L;
 
-	RsaPanel myPanel;
+	XRechnerPanel panel;
 
 
-	public QuitAction(final RsaPanel thePanel)
+	public QuitAction(final XRechnerPanel panel)
 	{
-		super("Quit");
+		super("QUIT");
 		putValue(SHORT_DESCRIPTION, "Quit the Program");
-		putValue(MNEMONIC_KEY, new Integer(KeyEvent.VK_U));
+		putValue(MNEMONIC_KEY, new Integer(KeyEvent.VK_Q));
 
-		myPanel = thePanel;
+		this.panel = panel;
 	}
 
 
-	// @Override
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{

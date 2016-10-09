@@ -1,4 +1,4 @@
-package ch.jkurs2.gui;
+package ch.jkurs2.gui_person_File;
 
 import ch.java_akademie.tools.MyTools;
 

@@ -1,4 +1,4 @@
-package ch.jkurs3.gui;
+package ch.jkurs3.gui_Person_DB;
 
 import java.sql.SQLException;
 import java.util.List;

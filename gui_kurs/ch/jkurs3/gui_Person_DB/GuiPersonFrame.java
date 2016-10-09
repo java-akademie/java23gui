@@ -1,4 +1,4 @@
-package ch.jkurs3.gui;
+package ch.jkurs3.gui_Person_DB;
 
 import javax.swing.JFrame;
 

@@ -63,19 +63,6 @@ public class RsaFrame extends JFrame
 	private void initListeners()
 	{
 
-		this.addMouseListener(new MouseAdapter()
-		{
-			@Override
-			public void mouseClicked(MouseEvent e)
-			{
-				if (e.getButton() == MouseEvent.BUTTON3)
-				{
-					myPanel.getPopupMenu1().show(myPanel,
-							e.getX() - 20, e.getY() - 40);
-				}
-			}
-		});
-
 		DocumentListener aDocumentListener = new DocumentListener()
 		{
 
@@ -112,6 +99,21 @@ public class RsaFrame extends JFrame
 				.addDocumentListener(aDocumentListener);
 		myPanel.getTfT().getDocument()
 				.addDocumentListener(aDocumentListener);
+
+		
+		
+		this.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{System.out.println("mouseClicked: ---"+e.getButton());
+				if (e.getButton() == MouseEvent.BUTTON3)
+				{
+					myPanel.getPopupMenu1().show(myPanel,
+							e.getX() - 20, e.getY() - 40);
+				}
+			}
+		});
 
 	}
 }

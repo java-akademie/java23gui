@@ -11,11 +11,13 @@ import javax.swing.JFrame;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
+import ch.jkurs4.gui_XRechner.XRechnerPanel;
+
 public class RechnerFrame extends JFrame
 {
 	private static final long serialVersionUID = 1L;
 
-	RechnerPanel panel;
+	XRechnerPanel panel;
 
 
 	public RechnerFrame()
@@ -37,7 +39,7 @@ public class RechnerFrame extends JFrame
 
 	private void initComponents()
 	{
-		panel = new RechnerPanel();
+		panel = new XRechnerPanel();
 
 		this.add(panel);
 		this.setLocation(100, 200);
@@ -127,7 +129,7 @@ public class RechnerFrame extends JFrame
 			@Override
 			public void keyTyped(KeyEvent e)
 			{
-				System.out.println("" + e);
+				System.out.println("keyTyped: ---- " + e);
 			}
 
 		});

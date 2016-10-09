@@ -1,4 +1,4 @@
-package ch.jkurs2.gui;
+package ch.jkurs2.gui_person_File;
 
 import javax.swing.JFrame;
 

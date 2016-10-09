@@ -57,53 +57,36 @@ public class RechnerPanel extends JPanel
 	{
 		return btnAdd;
 	}
-
-
 	public JButton getBtnClear()
 	{
 		return btnClear;
 	}
-
-
 	public JButton getBtnDiv()
 	{
 		return btnDiv;
 	}
-
-
 	public JButton getBtnEnd()
 	{
 		return btnEnd;
 	}
-
-
 	public JButton getBtnMult()
 	{
 		return btnMult;
 	}
-
-
 	public JButton getBtnSub()
 	{
 		return btnSub;
 	}
-
-
 	public JTextField getErgebnis()
 	{
 		return ergebnis;
 	}
-
-
 	public JTextField getWert1()
 	{
 		return wert1;
 	}
-
-
 	public JTextField getWert2()
 	{
 		return wert2;
 	}
-
 }

@@ -1,4 +1,4 @@
-package ch.jkurs3.gui;
+package ch.jkurs3.gui_Person_DB;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +12,7 @@ import ch.java_akademie.tools.MyDataSource;
 public class PersonDaoImpl implements PersonDao
 {
 	private String DROP_PERSON = "drop table person3";
-	private String CREATE_PERSON = "create table person3 (id int not null, name varchar(20),addr varchar(20), primary key(id))";
+	private String CREATE_PERSON = "create table person3 (id int not null, name varchar(30),addr varchar(50), primary key(id))";
 	private String PERSON_GET_BY_ID = "select id, name, addr from person3 where id=?";
 	private String PERSON_GET_BY_NAME = "select id, name, addr from person3 where name like ?";
 	private String PERSON_GET_ALL = "select id, name, addr from person3";
