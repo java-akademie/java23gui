@@ -1,11 +1,6 @@
 package ch.jkurs4.gui_XRechner;
 
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
 import javax.swing.JFrame;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -43,6 +38,7 @@ public class XRechnerFrame extends JFrame
 		setVisible(true);
 	}
 
+
 	/**
 	 * addTheListener
 	 */
@@ -78,7 +74,6 @@ public class XRechnerFrame extends JFrame
 	private void initListeners()
 	{
 		initDocumentListener();
-		// initMouseListener();
 	}
 
 
@@ -86,10 +81,11 @@ public class XRechnerFrame extends JFrame
 	/**
 	 * Document Listener.
 	 * 
-	 * Dient der Behandlung von Eingaben.<br>
+	 * Dient der Behandlung von Eingaben.
 	 * 
 	 * Wenn eine Berechnung gemacht wurde, sollte das Ergebnis gefuellt
-	 * sein und der Clear-Button disabled werden.<br>
+	 * sein und der Clear-Button disabled werden.
+	 * 
 	 * Nach der ersten Eingabe in eines der Wertefelder sollte das
 	 * Ergebnis geloescht werden und der Clear-Button enabled werden.
 	 * 
@@ -142,6 +138,7 @@ public class XRechnerFrame extends JFrame
 
 	}
 
+
 	protected void disableOps()
 	{
 		panel.getBtnAdd().getAction().setEnabled(false);
@@ -150,71 +147,4 @@ public class XRechnerFrame extends JFrame
 		panel.getBtnDiv().getAction().setEnabled(false);
 
 	}
-
-	/**
-	 * 
-	 */
-	private void initMouseListener()
-	{
-		panel.getWert1().addKeyListener(new KeyListener()
-		{
-			@Override
-			public void keyPressed(KeyEvent e)
-			{
-				System.out.println("1keyPressed: ---- " + e);
-			}
-
-
-			@Override
-			public void keyReleased(KeyEvent e)
-			{
-				System.out.println("1keyReleased: ---- " + e);
-			}
-
-
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				System.out.println("1keyTyped: ---- " + e);
-			}
-
-		});
-		panel.getWert2().addKeyListener(new KeyListener()
-		{
-			@Override
-			public void keyPressed(KeyEvent e)
-			{
-				System.out.println("2keyPressed: ---- " + e);
-			}
-
-
-			@Override
-			public void keyReleased(KeyEvent e)
-			{
-				System.out.println("2keyReleased: ---- " + e);
-			}
-
-
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				System.out.println("2keyTyped: ---- " + e);
-			}
-
-		});
-		
-		this.addMouseListener(new MouseAdapter()
-		{
-			@Override
-			public void mouseClicked(MouseEvent e)
-			{
-				if (e.getButton() == MouseEvent.BUTTON3)
-				{
-					System.out.println("rechte Maustaste gedrueckt!!");
-				}
-				System.out.println("xxxxx" + e.getButton()+" "+MouseEvent.BUTTON3);
-			}
-		});
-	}
-
 }
