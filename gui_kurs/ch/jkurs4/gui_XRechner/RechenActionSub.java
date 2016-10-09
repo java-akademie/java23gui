@@ -5,26 +5,26 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.AbstractAction;
 
-public class SubAction extends AbstractAction
+public class RechenActionSub extends AbstractAction
+{
+	private static final long serialVersionUID = 1L;
+
+	XRechnerPanel panel;
+
+
+	public RechenActionSub(final XRechnerPanel panel)
 	{
-		private static final long serialVersionUID = 1L;
+		super("-");
+		putValue(SHORT_DESCRIPTION, "Add the fields");
+		putValue(MNEMONIC_KEY, new Integer(KeyEvent.VK_S));
 
-		XRechnerPanel panel;
-
-
-		public SubAction(final XRechnerPanel panel)
-		{
-			super("-");
-			putValue(SHORT_DESCRIPTION, "Add the fields");
-			putValue(MNEMONIC_KEY, new Integer(KeyEvent.VK_S));
-
-			this.panel = panel;
-		}
-
-
-		@Override
-		public void actionPerformed(ActionEvent e)
-		{
-			panel.sub();
-		}
+		this.panel = panel;
 	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		panel.sub();
+	}
+}

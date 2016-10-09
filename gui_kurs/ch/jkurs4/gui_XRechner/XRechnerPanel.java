@@ -10,10 +10,10 @@ public class XRechnerPanel extends JPanel
 {
 	private static final long serialVersionUID = 1L;
 
-	private JButton btnAdd = new JButton("_+");
-	private JButton btnSub = new JButton("_-");
-	private JButton btnMult = new JButton("_*");
-	private JButton btnDiv = new JButton("_/");
+	private JButton btnAdd = new JButton("_add");
+	private JButton btnSub = new JButton("_sub");
+	private JButton btnMult = new JButton("_mult");
+	private JButton btnDiv = new JButton("_div");
 
 	private JButton btnClear = new JButton("_clear");
 	private JButton btnQuit = new JButton("_quit");
@@ -67,7 +67,7 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public void clear()
+	protected void clear()
 	{
 		wert1.setText("");
 		wert2.setText("");
@@ -91,7 +91,7 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public void add()
+	protected void add()
 	{
 		double[] werte = werteFuellen();
 
@@ -109,7 +109,7 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public void sub()
+	protected void sub()
 	{
 		double[] werte = werteFuellen();
 
@@ -127,7 +127,7 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public void mult()
+	protected void mult()
 	{
 		double[] werte = werteFuellen();
 
@@ -145,7 +145,7 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public void div()
+	protected void div()
 	{
 		double[] werte = werteFuellen();
 
@@ -163,55 +163,55 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	public JButton getBtnAdd()
+	protected JButton getBtnAdd()
 	{
 		return btnAdd;
 	}
 
 
-	public JButton getBtnClear()
+	protected JButton getBtnClear()
 	{
 		return btnClear;
 	}
 
 
-	public JButton getBtnDiv()
+	protected JButton getBtnDiv()
 	{
 		return btnDiv;
 	}
 
 
-	public JButton getBtnQuit()
+	protected JButton getBtnQuit()
 	{
 		return btnQuit;
 	}
 
 
-	public JButton getBtnMult()
+	protected JButton getBtnMult()
 	{
 		return btnMult;
 	}
 
 
-	public JButton getBtnSub()
+	protected JButton getBtnSub()
 	{
 		return btnSub;
 	}
 
 
-	public JTextField getErgebnis()
+	protected JTextField getErgebnis()
 	{
 		return ergebnis;
 	}
 
 
-	public JTextField getWert1()
+	protected JTextField getWert1()
 	{
 		return wert1;
 	}
 
 
-	public JTextField getWert2()
+	protected JTextField getWert2()
 	{
 		return wert2;
 	}

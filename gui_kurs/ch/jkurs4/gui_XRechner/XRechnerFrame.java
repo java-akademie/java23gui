@@ -52,19 +52,19 @@ public class XRechnerFrame extends JFrame
 		clearAction.setEnabled(false);
 		panel.getBtnClear().setAction(clearAction);
 
-		AddAction addAction = new AddAction(panel);
+		RechenActionAdd addAction = new RechenActionAdd(panel);
 		addAction.setEnabled(false);
 		panel.getBtnAdd().setAction(addAction);
 
-		MultAction multAction = new MultAction(panel);
+		RechenActionMult multAction = new RechenActionMult(panel);
 		multAction.setEnabled(false);
 		panel.getBtnMult().setAction(multAction);
 
-		SubAction subAction = new SubAction(panel);
+		RechenActionSub subAction = new RechenActionSub(panel);
 		subAction.setEnabled(false);
 		panel.getBtnSub().setAction(subAction);
 
-		DivAction divAction = new DivAction(panel);
+		RechenActionDiv divAction = new RechenActionDiv(panel);
 		divAction.setEnabled(false);
 		panel.getBtnDiv().setAction(divAction);
 	}

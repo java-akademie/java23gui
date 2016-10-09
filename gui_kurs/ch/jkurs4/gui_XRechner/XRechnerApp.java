@@ -5,5 +5,5 @@ public class XRechnerApp
 	public static void main(String[] args)
 	{
 		new XRechnerFrame();
-	}
+	} 
 }
