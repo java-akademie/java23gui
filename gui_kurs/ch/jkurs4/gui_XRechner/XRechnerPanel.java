@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
+import ch.java_akademie.tools.MyTools;
 
 public class XRechnerPanel extends JPanel
 {
@@ -22,9 +23,13 @@ public class XRechnerPanel extends JPanel
 	private JTextField wert2 = new JTextField("", 15);
 	private JTextField ergebnis = new JTextField("", 15);
 
+	XRechnerFrame frame;
 
-	public XRechnerPanel()
+
+	public XRechnerPanel(XRechnerFrame frame)
 	{
+		this.frame = frame;
+
 		boolean testZeile = false;
 
 		MyPanel mp = new MyPanel(5, 8, testZeile);
@@ -75,19 +80,11 @@ public class XRechnerPanel extends JPanel
 	}
 
 
-	private double[] werteFuellen()
+
+	protected void quit()
 	{
-		double[] werte = { 0, 0 };
-		try
-		{
-			werte[0] = Double.parseDouble(wert1.getText());
-			werte[1] = Double.parseDouble(wert2.getText());
-		}
-		catch (Exception e)
-		{
-			werte = null;
-		}
-		return werte;
+		System.out.println("eventuell Aufraeumarbeiten !!!");
+		frame.dispose();
 	}
 
 
@@ -160,6 +157,26 @@ public class XRechnerPanel extends JPanel
 
 		double erg = w1 / w2;
 		ergebnis.setText(erg + "");
+	}
+
+
+	//
+	// getter und setter
+	//
+
+	private double[] werteFuellen()
+	{
+		double[] werte = { 0, 0 };
+		try
+		{
+			werte[0] = Double.parseDouble(wert1.getText());
+			werte[1] = Double.parseDouble(wert2.getText());
+		}
+		catch (Exception e)
+		{
+			werte = null;
+		}
+		return werte;
 	}
 
 

@@ -25,6 +25,7 @@ public class QuitAction extends AbstractAction
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		System.exit(0);
+		panel.quit();
+	//	panel.getFrame().dispose(); //System.exit(0);
 	}
 }

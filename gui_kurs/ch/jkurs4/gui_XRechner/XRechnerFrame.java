@@ -28,7 +28,7 @@ public class XRechnerFrame extends JFrame
 	 */
 	private void initComponents()
 	{
-		panel = new XRechnerPanel();
+		panel = new XRechnerPanel(this);
 
 		this.add(panel);
 		this.pack();
