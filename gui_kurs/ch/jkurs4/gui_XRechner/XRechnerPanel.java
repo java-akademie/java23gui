@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
-import ch.java_akademie.tools.MyTools;
 
 public class XRechnerPanel extends JPanel
 {

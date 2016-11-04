@@ -51,40 +51,55 @@ public class AdressverwaltungPanel extends MyPanel
 	}
 
 
+	final static boolean TEST = true;
+
+
 	public AdressverwaltungPanel()
 	{
-		super(7, 10);
+		super(7, 20, TEST);
 
-		makeMenue();
 
-		this.addEmptyRow(15, '.', 10, 7);
-		this.addCaptionCenter("Adressverwaltung xxx", 15, 1, 7);
+		int zeile = TEST ? 1 : 0;
 
-		this.add(btOpenDB, 20, 1, 1);
-		this.add(btCloseDB, 20, 2, 1);
+		zeile++;
+		add(makeMenue(), zeile, 1, 7, 1);
 
-		this.add(btCreateTable, 30, 1, 1);
-		this.add(btDropTable, 30, 2, 1);
+		zeile++;
+		this.addCaptionCenter("Adressverwaltung 10/2016", zeile, 1, 7);
 
-		this.add(btInsert, 40, 1, 1);
-		this.add(btSelect, 40, 2, 1);
-		this.add(btUpdate, 40, 3, 1);
-		this.add(btDelete, 40, 4, 1);
+		zeile++;
+		this.add(btOpenDB, zeile, 1, 1);
+		this.add(btCloseDB, zeile, 2, 1);
 
-		this.addLabelRight("ID:", 50, 1, 1);
-		this.add(tfId, 50, 2, 1);
+		zeile++;
+		this.add(btCreateTable, zeile, 1, 1);
+		this.add(btDropTable, zeile, 2, 1);
 
-		this.addLabelRight("NAME:", 60, 1, 1);
-		this.add(tfName, 60, 2, 5);
+		zeile++;
+		this.add(btInsert, zeile, 1, 1);
+		this.add(btSelect, zeile, 2, 1);
+		this.add(btUpdate, zeile, 3, 1);
+		this.add(btDelete, zeile, 4, 1);
 
-		this.addLabelRight("ADDR:", 70, 1, 1);
-		this.add(tfAddr, 70, 2, 5);
+		zeile++;
+		this.addLabelRight("ID:", zeile, 1, 1);
+		this.add(tfId, zeile, 2, 1);
 
+		zeile++;
+		this.addLabelRight("NAME:", zeile, 1, 1);
+		this.add(tfName, zeile, 2, 5);
+
+		zeile++;
+		this.addLabelRight("ADDR:", zeile, 1, 1);
+		this.add(tfAddr, zeile, 2, 5);
+
+		zeile++;
 		taProtokoll.setEditable(false);
-		this.addTextArea(taProtokoll, 80, 1, 7, 1);
+		this.addTextArea(taProtokoll, zeile, 1, 7, 1);
 
-		this.add(btClear, 90, 6, 1);
-		this.add(btQuit, 90, 7, 1);
+		zeile++;
+		this.add(btClear, zeile, 6, 1);
+		this.add(btQuit, zeile, 7, 1);
 	}
 
 
@@ -209,7 +224,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 
 
-	void makeMenue()
+	JMenuBar makeMenue()
 	{
 
 
@@ -260,7 +275,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 		menuBar.add(menuHilfe);
 
-		add(menuBar, 1, 1, 7, 1);
+		return menuBar;
 	}
 
 
