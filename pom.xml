@@ -21,7 +21,7 @@
 		<!-- | MY DEPENDENCIES (MYTOOLS, LOG4J, JUNIT) | -->
 		<!-- +=========================================+ -->
 		<dependency>
-			<groupId>ch.jmb.mydeps</groupId>
+			<groupId>ch.jmb.dependencies</groupId>
 			<artifactId>mydeps</artifactId>
 			<version>1.0.0</version>
 			<type>pom</type>
@@ -34,8 +34,8 @@
 		<!-- | DB DEPENDENCIES (ECLIPSELINK und DB's) | -->
 		<!-- +========================================+ -->
 		<dependency>
-			<groupId>ch.jmb.dbdeps</groupId>
-			<artifactId>dbdeps</artifactId>
+			<groupId>ch.jmb.dependencies</groupId>
+			<artifactId>databases</artifactId>
 			<version>1.0.0</version>
 			<type>pom</type>
 		</dependency>
