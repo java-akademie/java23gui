@@ -1,9 +1,11 @@
 package ch.jkurs1.gui;
 
+import java.awt.GridLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class KlickMich3Frame extends JFrame
 {
@@ -18,8 +20,11 @@ public class KlickMich3Frame extends JFrame
 		super("KlickMich3 " + layout);
 
 		this.layout = layout;
+			setLayout(new GridLayout(3, 1));
 
-		this.add(new KlickMich2Panel(layout));
+		this.add(new KlickMich3Panel(this,layout));
+		this.add(new JLabel("xxx"));
+		this.add(new JLabel("zzz"));
 		KlickMich3Frame.zaehler++;
 
 		this.anzeigen();
