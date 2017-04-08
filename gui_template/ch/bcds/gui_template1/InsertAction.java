@@ -7,7 +7,7 @@ import javax.swing.AbstractAction;
 import javax.swing.JTextArea;
 
 import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TestDaten;
+import ch.java_akademie.tools.TestDatenTools;
 
 public class InsertAction extends AbstractAction
 {
@@ -41,8 +41,8 @@ public class InsertAction extends AbstractAction
 		{
 			try
 			{
-				prot.append(db.insertAddress(MyTools.getRandom(), TestDaten.getName(),
-						TestDaten.getAdresse()) + "\n");
+				prot.append(db.insertAddress(MyTools.getRandom(), TestDatenTools.getName(),
+						TestDatenTools.getAdresse()) + "\n");
 
 				frame.getMiOpenDb().getAction().setEnabled(false);
 				frame.getMiCloseDb().getAction().setEnabled(true);

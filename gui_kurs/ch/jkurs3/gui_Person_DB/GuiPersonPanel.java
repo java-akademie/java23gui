@@ -17,7 +17,7 @@ import javax.swing.JTextField;
 
 import ch.java_akademie.tools.MyPanel;
 import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TestDaten;
+import ch.java_akademie.tools.TestDatenTools;
 
 public class GuiPersonPanel extends JPanel implements ActionListener
 {
@@ -199,8 +199,8 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 
 				for (int i = 1; i < 10; i++)
 				{
-					Person p = new Person(MyTools.getRandom(1, 2000000000), TestDaten.getName(),
-							TestDaten.getAdresse());
+					Person p = new Person(MyTools.getRandom(1, 2000000000), TestDatenTools.getName(),
+							TestDatenTools.getAdresse());
 					dao.insert(p);
 					ta.append(p + " eingefuegt!\n");
 				}
