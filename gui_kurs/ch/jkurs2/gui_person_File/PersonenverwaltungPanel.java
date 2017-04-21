@@ -1,8 +1,5 @@
 package ch.jkurs2.gui_person_File;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -43,73 +40,42 @@ public class PersonenverwaltungPanel extends JPanel
 
 	protected void addTheListener()
 	{
-		quit.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				System.exit(1);
-			}
+		quit.addActionListener(ae -> System.exit(1));
+
+
+		clear.addActionListener(ae -> {
+			tfId.setText("");
+			tfName.setText("");
+			tfAddr.setText("");
+			taErgebnis.setText("");
 		});
 
-		clear.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				tfId.setText("");
-				tfName.setText("");
-				tfAddr.setText("");
-				taErgebnis.setText("");
-			}
+
+		btLoeschen.addActionListener(ae -> {
+			taErgebnis.append(pa.loeschen(tfId.getText()));
+			taErgebnis.append(pa.anzeigen());
 		});
 
-		btLoeschen.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				taErgebnis.append(pa.loeschen(tfId.getText()));
-				taErgebnis.append(pa.anzeigen());
-			}
+
+		btErfassen.addActionListener(ae -> {
+			taErgebnis.append(pa.erfassen(tfId.getText(),
+					tfName.getText(), tfAddr.getText()));
 		});
 
-		btErfassen.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				taErgebnis.append(pa.erfassen(tfId.getText(), tfName.getText(), tfAddr.getText()));
-			}
+
+		btAbspeichern.addActionListener(ae -> {
+			taErgebnis.append(pa.abspeichern());
 		});
 
-		btAnzeigen.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				taErgebnis.append(pa.anzeigen());
-			}
+
+		btAnzeigen.addActionListener(ae -> {
+			taErgebnis.append(pa.anzeigen());
 		});
 
-		btSortieren.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				taErgebnis.append(pa.sortieren());
-			}
-		});
 
-		btAbspeichern.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				taErgebnis.append(pa.abspeichern());
-			}
+		btSortieren.addActionListener(ae -> {
+			taErgebnis.append(pa.sortieren());
 		});
-
 	}
 
 
@@ -120,7 +86,7 @@ public class PersonenverwaltungPanel extends JPanel
 		MyPanel mp = new MyPanel(10, 10, test);
 
 		int zeile = test ? 1 : 0;
-		
+
 		// zeile 1
 		zeile++;
 		mp.addCaptionCenter("Personenverwaltung", zeile, 1, 10);
@@ -132,7 +98,7 @@ public class PersonenverwaltungPanel extends JPanel
 
 		// zeile 1
 		zeile++;
-	mp.addLabelRight("Name:", zeile, 1, 2);
+		mp.addLabelRight("Name:", zeile, 1, 2);
 		mp.add(tfName, zeile, 3, 8);
 
 		// zeile 1

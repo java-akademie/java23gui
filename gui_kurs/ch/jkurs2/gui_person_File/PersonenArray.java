@@ -40,8 +40,10 @@ public class PersonenArray
 
 		outFile.close();
 
-		System.out.println("Adressarray wurde in die Datei '" + fileName + "' geschrieben");
-		return ("Adressarray wurde in die Datei '" + fileName + "' geschrieben\n");
+		System.out.println("Adressarray wurde in die Datei '" + fileName
+				+ "' geschrieben");
+		return ("Adressarray wurde in die Datei '" + fileName
+				+ "' geschrieben\n");
 	}
 
 
@@ -56,7 +58,6 @@ public class PersonenArray
 
 		for (int i = 0; i < anzahlPersonen; i++)
 		{
-			person[i].show();
 			sb.append(person[i].show());
 		}
 
@@ -92,7 +93,8 @@ public class PersonenArray
 
 		inFile.close();
 
-		System.out.println("Adressarray wurde aus der Datei '" + fileName + "' gefuellt");
+		System.out.println("Adressarray wurde aus der Datei '"
+				+ fileName + "' gefuellt");
 
 	}
 
@@ -157,7 +159,7 @@ public class PersonenArray
 
 	private String intSollGefuelltSein(String id)
 	{
-		if (id == null)
+		if (id == null || id.trim().equals(""))
 			return MyTools.getRandom() + "";
 
 		try
@@ -178,7 +180,7 @@ public class PersonenArray
 		if (anzahlPersonen == 0)
 		{
 			System.out.println("keine Personen gespeichert ...");
-			;
+
 			return ("keine Personen gespeichert ...");
 		}
 
@@ -190,14 +192,20 @@ public class PersonenArray
 
 	public String loeschen(String zwId)
 	{
-		if (zwId.equals("*"))
-			anzahlPersonen = 0;
-		
 		if (anzahlPersonen == 0)
 		{
 			System.out.println("keine Personen gespeichert ...");
-			;
+
 			return ("keine Personen gespeichert ...");
+		}
+
+		if (zwId.equals("*"))
+		{
+			anzahlPersonen = 0;
+
+			System.out
+					.println("alle Adressen wurden aus Array entfernt");
+			return ("alle Adressen wurden aus Array entfernt");
 		}
 
 		// ID suchen
