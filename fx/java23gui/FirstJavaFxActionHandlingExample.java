@@ -1,7 +1,6 @@
 package java23gui;
 
 import javafx.application.Application;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,12 +25,12 @@ public class FirstJavaFxActionHandlingExample extends Application
 		final FlowPane pane = new FlowPane();
 
 		pane.getChildren().add(button);
-		
+
 		button.setOnAction(event -> {
 			pane.getChildren().add(new Label("Hallo JavaFX World!"));
 		});
-		
-	
+
+
 		stage.setScene(new Scene(pane, 400, 100));
 		stage.setTitle("FirstJavaFxExample");
 		stage.setResizable(true);
