@@ -1,4 +1,4 @@
-package java23gui;
+package ch.java1.fx;
 
 import javafx.application.Application;
 import javafx.scene.Node;
