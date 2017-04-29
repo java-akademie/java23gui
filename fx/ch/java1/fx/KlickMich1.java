@@ -1,18 +1,22 @@
 package ch.java1.fx;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class KlickMich1 extends Application
+		implements EventHandler<ActionEvent>
 {
-	final private Button button = new Button("klickMich");
+	private Pane pane;
+
+	final private Button klick = new Button("KLICK-MICH");
+	final private Button clear = new Button("CLEAR");
 	final private TextField tf1 = new TextField();
 	final private TextField tf2 = new TextField();
 
@@ -20,78 +24,87 @@ public class KlickMich1 extends Application
 	@Override
 	public void start(Stage stage) throws Exception
 	{
-		Pane pane = makeTheLayout("GRID");
-		addTheListener(pane);
+		makeTheLayout();
+		addTheListener();
+		showTheLayout(stage);
+	}
 
-		showTheLayout(stage, pane);
+
+	private void addTheListener()
+	{
+		klick.setOnAction(this);
+		clear.setOnAction(this);
+
+		// button.setOnAction(event -> {
+		// if (tf2.getText().equals(""))
+		// {
+		// tf2.setText("danke fuers klicken");
+		// tf1.setText("");
+		// }
+		// else
+		// {
+		// tf1.setText("danke fuers klicken");
+		// tf2.setText("");
+		// }
+		// });
 	}
 
 
 
-	private void addTheListener(Pane pane)
+	private void showTheLayout(Stage stage)
 	{
-
-		button.setOnAction(event -> {
-			if (tf2.getText().equals(""))
-			{
-				tf2.setText("danke dass du micht geklickt hast");
-				tf1.setText("");
-			}
-			else
-			{
-				tf1.setText("danke dass du micht geklickt hast");
-				tf2.setText("");
-			}
-		});
-	}
-
-
-
-	private void showTheLayout(Stage stage, Pane pane)
-	{
-		stage.setScene(new Scene(pane, 500, 100));
+		stage.setScene(new Scene(pane, 220, 100));
 		stage.setTitle("KlickMich1");
 		stage.setResizable(true);
 		stage.centerOnScreen();
-		stage.sizeToScene();
 		stage.show();
 	}
 
 
 
-	private Pane makeTheLayout(String s)
+	private void makeTheLayout()
 	{
-		Pane p = null;
+		pane = new FlowPane();
 
-		switch (s)
-		{
-			case "FLOW":
-				p = new FlowPane();
-				break;
-			case "GRID":
-				p = new GridPane();
-				break;
-			case "STACK":
-				p = new StackPane();
-				break;
-		}
-
-
-		p.getChildren().add(button);
-
-		tf1.setPrefColumnCount(20);
-		p.getChildren().add(tf1);
-
-		tf2.setPrefColumnCount(20);
-		p.getChildren().add(tf2);
-
-		return p;
+		// button.setPrefWidth(200);
+		// tf1.setPrefWidth(200);
+		// tf2.setPrefWidth(200);
+		// tf2.setPrefHeight(24);
+		pane.getChildren().addAll(klick, clear, tf1, tf2);
 	}
 
 
 	public static void main(String[] args)
 	{
-		launch(args);
+		Application.launch(args);
+	}
+
+
+
+	@Override
+	public void handle(ActionEvent event)
+	{
+		System.out.println(event);
+
+		if (event.getSource() == klick)
+		{
+			if (tf2.getText().equals(""))
+			{
+				tf2.setText("danke fuers klicken");
+				tf1.setText("");
+			}
+			else
+			{
+				tf1.setText("danke fuers klicken");
+				tf2.setText("");
+			}
+		}
+		else
+			if (event.getSource() == clear)
+			{
+				tf1.setText("");
+				tf2.setText("");
+			}
 	}
 
 
