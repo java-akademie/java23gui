@@ -4,5 +4,4 @@
 /temp/
 .DS_Store
 /adressen.txt
-/hs_err_pid64546.log
-/hs_err_pid64718.log
+/*.log

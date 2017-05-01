@@ -15,7 +15,8 @@ public class KlickMich1 extends Application
 {
 	private Pane pane;
 
-	final private Button klick = new Button("KLICK-MICH");
+	final private Button klick1 = new Button("KlickMich1");
+	final private Button klick2 = new Button("KlickMich2");
 	final private Button clear = new Button("CLEAR");
 	final private TextField tf1 = new TextField();
 	final private TextField tf2 = new TextField();
@@ -32,32 +33,54 @@ public class KlickMich1 extends Application
 
 	private void addTheListener()
 	{
-		klick.setOnAction(this);
-		clear.setOnAction(this);
+		klick1.setOnAction(this);
 
-		// button.setOnAction(event -> {
-		// if (tf2.getText().equals(""))
-		// {
-		// tf2.setText("danke fuers klicken");
-		// tf1.setText("");
-		// }
-		// else
-		// {
-		// tf1.setText("danke fuers klicken");
-		// tf2.setText("");
-		// }
-		// });
+		clear.setOnAction(new EventHandler<ActionEvent>()
+		{
+			public void handle(ActionEvent e)
+			{
+				clear();
+			}
+
+		});
+
+		klick2.setOnAction(e -> klick2());
 	}
 
+
+	private void clear()
+	{
+		tf1.setText("");
+		tf2.setText("");
+	}
+
+
+	private void klick2()
+	{
+		if (tf1.getText().equals(""))
+		{
+			tf1.setText("danke fuers klicken 2");
+			tf2.setText("");
+		}
+		else
+		{
+			tf2.setText("danke fuers klicken 2");
+			tf1.setText("");
+		}
+	}
 
 
 	private void showTheLayout(Stage stage)
 	{
-		stage.setScene(new Scene(pane, 220, 100));
+		stage.setScene(new Scene(pane, 200, 120));
 		stage.setTitle("KlickMich1");
 		stage.setResizable(true);
-		stage.centerOnScreen();
+		//stage.centerOnScreen();
+		stage.setX(600);
+		stage.setY(30);
 		stage.show();
+		System.out.println(stage.getX());
+		System.out.println(stage.getY());
 	}
 
 
@@ -70,7 +93,7 @@ public class KlickMich1 extends Application
 		// tf1.setPrefWidth(200);
 		// tf2.setPrefWidth(200);
 		// tf2.setPrefHeight(24);
-		pane.getChildren().addAll(klick, clear, tf1, tf2);
+		pane.getChildren().addAll(klick1, klick2, tf1, tf2, clear);
 	}
 
 
@@ -82,31 +105,23 @@ public class KlickMich1 extends Application
 
 
 	@Override
-	public void handle(ActionEvent event)
+	public void handle(ActionEvent e)
 	{
-		System.out.println(event);
+		System.out.println(e);
 
-		if (event.getSource() == klick)
+		if (e.getSource() == klick1)
 		{
 			if (tf2.getText().equals(""))
 			{
-				tf2.setText("danke fuers klicken");
+				tf2.setText("danke fuers klicken 1");
 				tf1.setText("");
 			}
 			else
 			{
-				tf1.setText("danke fuers klicken");
+				tf1.setText("danke fuers klicken 1");
 				tf2.setText("");
 			}
 		}
-		else
-			if (event.getSource() == clear)
-			{
-				tf1.setText("");
-				tf2.setText("");
-			}
 	}
-
-
 
 }
