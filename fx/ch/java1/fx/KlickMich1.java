@@ -2,7 +2,6 @@ package ch.java1.fx;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -40,16 +39,16 @@ public class KlickMich1 extends Application
 			@Override
 			public void handle(ActionEvent ae)
 			{
-					if (tf1.getText().equals(""))
-					{
-						tf1.setText("danke fuers klicken 1");
-						tf2.setText("");
-					}
-					else
-					{
-						tf2.setText("danke fuers klicken 1");
-						tf1.setText("");
-					}
+				if (tf1.getText().equals(""))
+				{
+					tf1.setText("danke fuers klicken 1");
+					tf2.setText("");
+				}
+				else
+				{
+					tf2.setText("danke fuers klicken 1");
+					tf1.setText("");
+				}
 			}
 		};
 
@@ -114,7 +113,8 @@ public class KlickMich1 extends Application
 		// tf1.setPrefWidth(200);
 		// tf2.setPrefWidth(200);
 		// tf2.setPrefHeight(24);
-		pane.getChildren().addAll(klick1, klick2,klick3, tf1, tf2, clear);
+		pane.getChildren().addAll(klick1, klick2, klick3, tf1, tf2,
+				clear);
 	}
 
 
