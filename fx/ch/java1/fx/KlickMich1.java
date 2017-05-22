@@ -2,6 +2,7 @@ package ch.java1.fx;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,6 +18,7 @@ public class KlickMich1 extends Application
 
 	final private Button klick1 = new Button("KlickMich1");
 	final private Button klick2 = new Button("KlickMich2");
+	final private Button klick3 = new Button("KlickMich3");
 	final private Button clear = new Button("CLEAR");
 	final private TextField tf1 = new TextField();
 	final private TextField tf2 = new TextField();
@@ -33,7 +35,26 @@ public class KlickMich1 extends Application
 
 	private void addTheListener()
 	{
-		klick1.setOnAction(this);
+		EventHandler<ActionEvent> eh = new EventHandler<ActionEvent>()
+		{
+			@Override
+			public void handle(ActionEvent ae)
+			{
+					if (tf1.getText().equals(""))
+					{
+						tf1.setText("danke fuers klicken 1");
+						tf2.setText("");
+					}
+					else
+					{
+						tf2.setText("danke fuers klicken 1");
+						tf1.setText("");
+					}
+			}
+		};
+
+		klick1.setOnAction(eh);
+		klick2.setOnAction(this);
 
 		clear.setOnAction(new EventHandler<ActionEvent>()
 		{
@@ -44,7 +65,7 @@ public class KlickMich1 extends Application
 
 		});
 
-		klick2.setOnAction(e -> klick2());
+		klick3.setOnAction(ex -> klick3());
 	}
 
 
@@ -55,16 +76,16 @@ public class KlickMich1 extends Application
 	}
 
 
-	private void klick2()
+	private void klick3()
 	{
 		if (tf1.getText().equals(""))
 		{
-			tf1.setText("danke fuers klicken 2");
+			tf1.setText("danke fuers klicken 3");
 			tf2.setText("");
 		}
 		else
 		{
-			tf2.setText("danke fuers klicken 2");
+			tf2.setText("danke fuers klicken 3");
 			tf1.setText("");
 		}
 	}
@@ -72,10 +93,10 @@ public class KlickMich1 extends Application
 
 	private void showTheLayout(Stage stage)
 	{
-		stage.setScene(new Scene(pane, 200, 120));
+		stage.setScene(new Scene(pane, 350, 120));
 		stage.setTitle("KlickMich1");
 		stage.setResizable(true);
-		//stage.centerOnScreen();
+		// stage.centerOnScreen();
 		stage.setX(600);
 		stage.setY(30);
 		stage.show();
@@ -93,7 +114,7 @@ public class KlickMich1 extends Application
 		// tf1.setPrefWidth(200);
 		// tf2.setPrefWidth(200);
 		// tf2.setPrefHeight(24);
-		pane.getChildren().addAll(klick1, klick2, tf1, tf2, clear);
+		pane.getChildren().addAll(klick1, klick2,klick3, tf1, tf2, clear);
 	}
 
 
@@ -109,17 +130,17 @@ public class KlickMich1 extends Application
 	{
 		System.out.println(e);
 
-		if (e.getSource() == klick1)
+		if (e.getSource() == klick2)
 		{
-			if (tf2.getText().equals(""))
+			if (tf1.getText().equals(""))
 			{
-				tf2.setText("danke fuers klicken 1");
-				tf1.setText("");
+				tf1.setText("danke fuers klicken 2");
+				tf2.setText("");
 			}
 			else
 			{
-				tf1.setText("danke fuers klicken 1");
-				tf2.setText("");
+				tf2.setText("danke fuers klicken 2");
+				tf1.setText("");
 			}
 		}
 	}
