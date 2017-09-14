@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JLabel;
 
-import ch.java_akademie.tools.MyPanel;
+import ch.jmb.tools.MyPanel;
 
 public class AboutAction extends AbstractAction
 {

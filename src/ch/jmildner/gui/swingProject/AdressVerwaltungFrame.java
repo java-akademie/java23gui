@@ -30,7 +30,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
-import ch.java_akademie.tools.SwingTools;
+import ch.jmb.tools.SwingTools;
 
 @SuppressWarnings("deprecation")
 public class AdressVerwaltungFrame extends JFrame implements

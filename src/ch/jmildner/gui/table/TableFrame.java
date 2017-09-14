@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import ch.java_akademie.tools.MyPanel;
+import ch.jmb.tools.MyPanel;
 
 public class TableFrame extends JFrame
 {

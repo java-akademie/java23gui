@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JTextArea;
 
-import ch.java_akademie.tools.MyPanel;
+import ch.jmb.tools.MyPanel;
 
 public class DropTableAction extends AbstractAction
 {

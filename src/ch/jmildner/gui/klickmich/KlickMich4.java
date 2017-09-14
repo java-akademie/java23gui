@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-import ch.java_akademie.tools.MyPanel;
+import ch.jmb.tools.MyPanel;
 
 public class KlickMich4 extends JFrame implements ActionListener
 {

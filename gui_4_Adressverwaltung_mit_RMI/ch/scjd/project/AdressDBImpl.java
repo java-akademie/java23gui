@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Vector;
 
-import ch.java_akademie.tools.TextFile;
+import ch.jmb.tools.TextFile;
 
 public class AdressDBImpl extends UnicastRemoteObject implements
 		AdressDB

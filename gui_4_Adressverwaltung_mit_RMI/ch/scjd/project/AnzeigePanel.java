@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import ch.java_akademie.tools.SwingTools;
+import ch.jmb.tools.SwingTools;
 
 @SuppressWarnings("deprecation")
 public class AnzeigePanel extends JPanel

@@ -2,8 +2,8 @@ package ch.jkurs2.gui_person_File;
 
 import java.io.FileNotFoundException;
 
-import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TextFile;
+import ch.jmb.tools.MyTools;
+import ch.jmb.tools.TextFile;
 
 public class PersonenArray
 {

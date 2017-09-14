@@ -6,8 +6,8 @@ import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JTextArea;
 
-import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TestDatenTools;
+import ch.jmb.tools.MyTools;
+import ch.jmb.tools.TestDatenTools;
 
 public class InsertAction extends AbstractAction
 {

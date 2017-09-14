@@ -15,9 +15,9 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.java_akademie.tools.MyPanel;
-import ch.java_akademie.tools.MyTools;
-import ch.java_akademie.tools.TestDatenTools;
+import ch.jmb.tools.MyPanel;
+import ch.jmb.tools.MyTools;
+import ch.jmb.tools.TestDatenTools;
 
 public class GuiPersonPanel extends JPanel implements ActionListener
 {

@@ -7,7 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.java_akademie.tools.MyDataSource;
+import ch.jmb.tools.MyDataSource;
 
 public class PersonDaoImpl implements PersonDao
 {

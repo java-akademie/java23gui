@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import ch.java_akademie.tools.SwingTools;
+import ch.jmb.tools.SwingTools;
 
 @SuppressWarnings("deprecation")
 public class SwingPanel extends JPanel
