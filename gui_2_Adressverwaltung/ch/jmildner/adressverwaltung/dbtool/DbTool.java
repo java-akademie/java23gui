@@ -18,7 +18,7 @@ public final class DbTool
 	private static final String DRV = "org.h2.Driver";
 	private static final String URL = "jdbc:h2:tcp://localhost/~/test";
 	private static final String USR = "sa";
-	private static final String PWD = "";
+	private static final String PWD = "sa";
 
 
 	public static DbTool getInstance()

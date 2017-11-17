@@ -15,7 +15,7 @@ public class DbTest
 	{
 		Class.forName("org.h2.Driver");
 		Connection c = DriverManager.getConnection(
-				"jdbc:h2:tcp://localhost/~/test", "sa", "");
+				"jdbc:h2:tcp://localhost/~/test", "sa", "sa");
 
 		Statement s = c.createStatement();
 

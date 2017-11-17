@@ -226,8 +226,6 @@ public class AdressverwaltungPanel extends MyPanel
 
 	JMenuBar makeMenue()
 	{
-
-
 		JMenuBar menuBar = new JMenuBar();
 		JMenuItem menuItem;
 

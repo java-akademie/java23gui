@@ -4,9 +4,12 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -23,11 +26,11 @@ public class KlickMich2 extends Application
 	final private TextField tf1 = new TextField();
 	final private TextField tf2 = new TextField();
 
-
+TextArea ta;
 	@Override
 	public void start(Stage stage) throws Exception
 	{
-		makeTheLayout();
+		makeTheLayout2();
 		addTheListener();
 		showTheLayout(stage);
 	}
@@ -80,9 +83,9 @@ public class KlickMich2 extends Application
 	private void showTheLayout(Stage stage)
 	{
 		stage.setScene(new Scene(pane));
-		stage.setTitle("KlickMich2");
-		stage.setResizable(true);
-		// stage.centerOnScreen();
+		stage.setTitle("KlickMich2xxxx");
+		stage.setResizable(false);
+		stage.centerOnScreen();
 		stage.setX(600);
 		stage.setY(30);
 		stage.show();
@@ -90,7 +93,7 @@ public class KlickMich2 extends Application
 
 
 
-	private void makeTheLayout()
+	private void makeTheLayout1()
 	{
 		FlowPane rootPane = new FlowPane();
 
@@ -114,13 +117,31 @@ public class KlickMich2 extends Application
 
 		rootPane.getChildren().addAll(pane1, pane2, pane3);
 
-		Tooltip ttKlick1 = new Tooltip(
+		Tooltip ttKlick = new Tooltip(
 				"klicken Sie und es wird Ihnen gezeigt");
-		klick1.setTooltip(ttKlick1);
-		klick2.setTooltip(ttKlick1);
-tf1.setTooltip(new Tooltip("hier wird der Text ausgegeben"));
+		klick1.setTooltip(ttKlick);
+		klick2.setTooltip(ttKlick);
+		tf1.setTooltip(new Tooltip("hier wird der Text ausgegeben"));
 		Tooltip.install(rootPane, new Tooltip("tt fuer das rootPane"));
 		this.pane = rootPane;
+	}
+
+
+	private void makeTheLayout2()
+	{
+		GridPane gridPane = new GridPane();
+		gridPane.setVgap(5);
+		gridPane.setHgap(8);
+		gridPane.setPadding(new Insets(10));
+
+		gridPane.add(new Label("Name:"), 1, 1);
+		gridPane.add(new TextField("Name eingeben"), 2, 1);
+		gridPane.add(new Label("Beruf:"), 1, 2);
+		gridPane.add(new TextField("Beruf eingeben"), 2, 2);
+		gridPane.add(new Button("speichern"), 3, 4);
+
+		gridPane.setGridLinesVisible(true);
+		this.pane = gridPane;
 	}
 
 
