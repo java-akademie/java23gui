@@ -26,13 +26,32 @@ public class KlickMich2 extends Application
 	final private TextField tf1 = new TextField();
 	final private TextField tf2 = new TextField();
 
-TextArea ta;
+	TextArea ta;
+
+
 	@Override
 	public void start(Stage stage) throws Exception
 	{
-		makeTheLayout2();
+		makeTheLayout(1);
 		addTheListener();
 		showTheLayout(stage);
+	}
+
+
+	private void makeTheLayout(int i)
+	{
+		switch (i)
+		{
+			case 1:
+				makeTheLayout1();
+				break;
+			case 2:
+				makeTheLayout2();
+				break;
+			default:
+				break;
+		}
+
 	}
 
 
