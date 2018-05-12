@@ -6,9 +6,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
-public class DialogPanel extends MyPanel
+
+
+public class DialogPanel  extends MyPanel
 {
 	private static final long serialVersionUID = 1L;
 

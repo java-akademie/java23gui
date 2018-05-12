@@ -16,33 +16,24 @@
 	</properties>
 
 	<dependencies>
-
-		<!-- +=========================================+ -->
-		<!-- | MY DEPENDENCIES (MYTOOLS, LOG4J, JUNIT) | -->
-		<!-- +=========================================+ -->
+	
 		<dependency>
-			<groupId>ch.jmb.dependencies</groupId>
-			<artifactId>mydeps</artifactId>
+			<groupId>ch.jmildner</groupId>
+			<artifactId>dependenciesMY</artifactId>
 			<version>1.0.0</version>
 			<type>pom</type>
 		</dependency>
-		<!-- +========================================+ -->
 
-
-
-		<!-- +========================================+ -->
-		<!-- | DB DEPENDENCIES (ECLIPSELINK und DB's) | -->
-		<!-- +========================================+ -->
 		<dependency>
-			<groupId>ch.jmb.dependencies</groupId>
-			<artifactId>databases</artifactId>
+			<groupId>ch.jmildner</groupId>
+			<artifactId>dependenciesDB</artifactId>
 			<version>1.0.0</version>
 			<type>pom</type>
 		</dependency>
-		<!-- +========================================+ -->
-
 
 	</dependencies>
+
+
 
 
 

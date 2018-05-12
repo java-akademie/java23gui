@@ -1,6 +1,6 @@
 package ch.jkurs2.gui_person_File;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Person
 {

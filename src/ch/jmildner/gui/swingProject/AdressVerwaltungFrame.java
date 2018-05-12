@@ -1,4 +1,5 @@
 /**
+ * 
  * Grafikprogrammierung mit Swing
  * NDS-I/16, 4. Quartal 2004
  *
@@ -7,6 +8,7 @@
  * Autor  : Johann Mildner
  * Dozent : Diego Schmidlin
  * Datum  : 16. September 2004
+ * 
  */
 
 package ch.jmildner.gui.swingProject;
@@ -32,9 +34,10 @@ import javax.swing.JToolBar;
 
 import ch.jmb.tools.SwingTools;
 
+
 @SuppressWarnings("deprecation")
-public class AdressVerwaltungFrame extends JFrame implements
-		ActionListener
+public class AdressVerwaltungFrame extends JFrame
+		implements ActionListener
 {
 	private static final long serialVersionUID = 1L;
 
@@ -478,8 +481,8 @@ public class AdressVerwaltungFrame extends JFrame implements
 	{
 		if (isNumeric(tfId.getText()))
 		{
-			taErg.setText(mdb.tbInsert(tfId.getText(),
-					tfName.getText(), tfAddr.getText()));
+			taErg.setText(mdb.tbInsert(tfId.getText(), tfName.getText(),
+					tfAddr.getText()));
 
 		}
 		else

@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import ch.jmb.tools.SwingTools;
 
 
+
 @SuppressWarnings("deprecation")
 public class SwingPanel extends JPanel
 {

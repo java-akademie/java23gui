@@ -2,7 +2,7 @@ package ch.jkurs3.gui_Person_DB;
 
 import java.util.List;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class TestPersonDao
 {

@@ -3,7 +3,7 @@ package ch.jkurs3.gui_Person_DB;
 import java.sql.SQLException;
 import java.util.List;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 import junit.framework.TestCase;
 
 public class UnitTestPersonDao extends TestCase

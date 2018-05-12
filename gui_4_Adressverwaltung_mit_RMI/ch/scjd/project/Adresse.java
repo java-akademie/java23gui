@@ -3,7 +3,7 @@ package ch.scjd.project;
 import java.io.Serializable;
 import java.util.StringTokenizer;
 
-import ch.jmb.tools.MyTools;
+import ch.jmildner.tools.MyTools;
 
 public class Adresse implements Serializable
 {
