@@ -21,7 +21,7 @@ public class DialogFrame extends JFrame
 		super("Dialog");
 
 		final DialogPanel dp = new DialogPanel();
-
+			
 		this.add(dp);
 
 		this.setLocation(200, 100);

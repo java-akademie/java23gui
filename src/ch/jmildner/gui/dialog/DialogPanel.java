@@ -9,8 +9,7 @@ import javax.swing.JTextField;
 import ch.jmildner.tools.MyPanel;
 
 
-
-public class DialogPanel  extends MyPanel
+public class DialogPanel extends MyPanel
 {
 	private static final long serialVersionUID = 1L;
 
@@ -78,13 +77,19 @@ public class DialogPanel  extends MyPanel
 
 	private void makeTheLayout()
 	{
-		this.addEmptyRow(8, ' ', 10, 6);
+		boolean test=true;
+		this.init(6,8,true);
+		
+		int zeile=test?1:0;
+		
+		zeile++;
+		this.addCaptionCenter("UEBERSCHRIFT", zeile, 1, 6);
 
-		this.addCaptionCenter("UEBERSCHRIFT", 10, 1, 6);
-
-		this.add(b1, 20, 1, 2);
-		this.add(b2, 20, 5, 2);
-		this.add(tf1, 30, 1, 6);
-		this.add(tf2, 40, 1, 6);
+		zeile++;
+		this.add(b1, zeile, 3, 2);
+		this.add(b2, zeile, 5, 2);
+		
+		this.add(tf1, ++zeile, 1, 6);
+		this.add(tf2, ++zeile, 1, 6);
 	}
 }
