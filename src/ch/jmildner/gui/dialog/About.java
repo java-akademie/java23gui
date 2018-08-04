@@ -12,7 +12,6 @@ public class About extends JDialog
 {
 	private static final long serialVersionUID = 1L;
 
-
 	public About()
 	{
 		JButton ende = new JButton("ende");
