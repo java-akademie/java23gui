@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.AbstractAction;
 import javax.swing.JTextArea;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class DropTableAction extends AbstractAction
 {
@@ -62,7 +62,7 @@ public class DropTableAction extends AbstractAction
 		}
 
 		System.out.println(prot);
-		MyPanel panel = new MyPanel(10, 10, false);
+		MyPanel panel = new MyPanel();
 		JTextArea ta = new JTextArea();
 		ta.append(prot.toString());
 		panel.add(ta, 2, 2, 8, 5);

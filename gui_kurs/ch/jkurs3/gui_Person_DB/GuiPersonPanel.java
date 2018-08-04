@@ -15,7 +15,7 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 import ch.jmildner.tools.MyTools;
 import ch.jmildner.tools.TestDatenTools;
 
@@ -173,7 +173,7 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 		try
 		{
 			dao = new PersonDaoImpl();
-			
+
 			ta.setText("connect OK");
 		}
 		catch (Exception e)
@@ -199,7 +199,9 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 
 				for (int i = 1; i < 10; i++)
 				{
-					Person p = new Person(MyTools.getRandom(1, 2000000000), TestDatenTools.getName(),
+					Person p = new Person(
+							MyTools.getRandom(1, 2000000000),
+							TestDatenTools.getName(),
 							TestDatenTools.getAdresse());
 					dao.insert(p);
 					ta.append(p + " eingefuegt!\n");
@@ -236,7 +238,7 @@ public class GuiPersonPanel extends JPanel implements ActionListener
 	private void makeTheLayout()
 	{
 		boolean testZeile = false;
-		mp = new MyPanel(5, 12, testZeile);
+		mp = new MyPanel();
 
 		zeile = testZeile ? 1 : 0;
 

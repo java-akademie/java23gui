@@ -4,7 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class XRechnerPanel extends JPanel
 {
@@ -31,7 +31,7 @@ public class XRechnerPanel extends JPanel
 
 		boolean testZeile = false;
 
-		MyPanel mp = new MyPanel(5, 8, testZeile);
+		MyPanel mp = new MyPanel();
 
 		int zeile = testZeile ? 1 : 0;
 

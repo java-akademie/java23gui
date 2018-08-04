@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class PersonenverwaltungPanel extends JPanel
 {
@@ -83,7 +83,7 @@ public class PersonenverwaltungPanel extends JPanel
 	{
 		boolean test = true;
 
-		MyPanel mp = new MyPanel(10, 10, test);
+		MyPanel mp = new MyPanel();
 
 		int zeile = test ? 1 : 0;
 

@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class Rechner extends JDialog
 {

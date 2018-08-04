@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class Rechner2Panel extends JPanel implements ActionListener
 {
@@ -52,8 +52,8 @@ public class Rechner2Panel extends JPanel implements ActionListener
 
 		if (e.getSource() == random)
 		{
-			w1.setText("" + _Tools.getRandom(10000,2));
-			w2.setText("" + _Tools.getRandom(5000,2));
+			w1.setText("" + _Tools.getRandom(10000, 2));
+			w2.setText("" + _Tools.getRandom(5000, 2));
 			erg.setText("");
 			return;
 		}
@@ -108,7 +108,7 @@ public class Rechner2Panel extends JPanel implements ActionListener
 	{
 		boolean testZeile = false;
 
-		MyPanel mp = new MyPanel(5, 14, testZeile);
+		MyPanel mp = new MyPanel();
 
 		int zeile = testZeile ? 1 : 0;
 

@@ -8,7 +8,7 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class AdressverwaltungPanel extends MyPanel
 {
@@ -56,7 +56,7 @@ public class AdressverwaltungPanel extends MyPanel
 
 	public AdressverwaltungPanel()
 	{
-		super(7, 20, TEST);
+		super();
 
 
 		int zeile = TEST ? 1 : 0;

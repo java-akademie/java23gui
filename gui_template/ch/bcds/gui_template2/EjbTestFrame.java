@@ -48,7 +48,8 @@ public final class EjbTestFrame extends JFrame
 			{
 				if (e.getButton() == MouseEvent.BUTTON3)
 				{
-					panel.getPopupMenu().show(panel, e.getX() - 20, e.getY() - 40);
+					panel.getPopupMenu().show(panel, e.getX() - 20,
+							e.getY() - 40);
 				}
 				System.out.println(e.getButton());
 			}
@@ -82,13 +83,17 @@ public final class EjbTestFrame extends JFrame
 
 		};
 
-		panel.getTfId().getDocument().addDocumentListener(documentListener);
+		panel.getTfId().getDocument()
+				.addDocumentListener(documentListener);
 
-		panel.getTfName().getDocument().addDocumentListener(documentListener);
+		panel.getTfName().getDocument()
+				.addDocumentListener(documentListener);
 
-		panel.getTfAddr().getDocument().addDocumentListener(documentListener);
+		panel.getTfAddr().getDocument()
+				.addDocumentListener(documentListener);
 
-		panel.getTaProtokoll().getDocument().addDocumentListener(documentListener);
+		panel.getTaProtokoll().getDocument()
+				.addDocumentListener(documentListener);
 	}
 
 

@@ -10,7 +10,9 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
+
+
 
 public class TableFrame extends JFrame
 {
@@ -111,7 +113,7 @@ public class TableFrame extends JFrame
 
 	private void makeTheLayout()
 	{
-		MyPanel mp = new MyPanel(6, 12, false);
+		MyPanel mp = new MyPanel();
 
 		int zeile = 0;
 

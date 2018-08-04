@@ -8,12 +8,12 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class EjbTestPanel extends MyPanel
 {
 	private static final long serialVersionUID = 1L;
-	
+
 	private JButton btExit = new JButton("_exit");
 
 	private JButton btClear = new JButton("_clear");
@@ -51,17 +51,18 @@ public class EjbTestPanel extends MyPanel
 		popupMenu.add(menuItemExit);
 	}
 
-	final static boolean TEST=true;
+	final static boolean TEST = true;
+
 
 	public EjbTestPanel()
 	{
-		super(7, 20,TEST);
-		
-		
-		int zeile=TEST?1:0;
-		
+		super();
+
+
+		int zeile = TEST ? 1 : 0;
+
 		zeile++;
-		add(makeMenue(),zeile,1,7,1);
+		add(makeMenue(), zeile, 1, 7, 1);
 
 		zeile++;
 		this.addCaptionCenter("EJB Test", 15, 1, 7);

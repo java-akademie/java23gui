@@ -11,7 +11,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import ch.jmb.tools.MyPanel;
+import ch.jmildner.tools.MyPanel;
 
 public class GuiUebung2Panel extends MyPanel
 {
@@ -82,7 +82,7 @@ public class GuiUebung2Panel extends MyPanel
 
 	private void makeTheLayout()
 	{
-		this.addEmptyGrid(8, '.',12, 8);
+		this.addEmptyGrid(8, '.', 12, 8);
 
 		this.addCaptionCenter("UEBERSCHRIFT...", 10, 1, 10);
 		JPanel p = new JPanel();
