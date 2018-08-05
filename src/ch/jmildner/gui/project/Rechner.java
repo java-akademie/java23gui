@@ -130,13 +130,13 @@ public class Rechner extends JDialog
 
 	private void makeTheLayout()
 	{
-		MyPanel mp = new MyPanel();
+		MyPanel mp = new MyPanel(4,10,true);
 		mp.add(a, 20, 1, 4);
 		mp.add(b, 30, 1, 4);
 		mp.add(add, 40, 1, 1);
 		mp.add(sub, 40, 2, 1);
-		mp.add(mul, 40, 4, 1);
-		mp.add(div, 40, 5, 1);
+		mp.add(mul, 40, 3, 1);
+		mp.add(div, 40, 4, 1);
 		mp.add(e, 50, 1, 4);
 
 		mp.add(ende, 60, 4, 1);

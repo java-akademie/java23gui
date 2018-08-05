@@ -32,7 +32,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
-import ch.jmb.tools.SwingTools;
+import ch.jmildner.tools.SwingTools;
 
 
 @SuppressWarnings("deprecation")

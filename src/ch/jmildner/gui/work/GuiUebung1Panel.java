@@ -82,7 +82,7 @@ public class GuiUebung1Panel extends MyPanel
 		JMenuBar mb = new JMenuBar();
 		f.setJMenuBar(mb);
 
-		this.addEmptyRow(8, ' ', 10, 6);
+		this.init(6,10,true);
 
 		this.addCaptionCenter("UEBERSCHRIFT", 10, 1, 6);
 
